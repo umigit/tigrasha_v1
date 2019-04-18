@@ -3,6 +3,7 @@
     <div class="header-container">
       <div class="search-container">
         <input type="search" class="header-search" id="postSearch" />
+        <a class="search-button"><font-awesome-icon icon="search"/></a>
       </div>
       <img class="header-icon" src="~assets/images/icon-white.png"/>
     </div>
@@ -32,7 +33,15 @@ header {
 }
 
 .search-container {
-  width: 100%;
+  position: relative;
+}
+
+.search-button {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translate(50%, -50%);
+  font-size: 20px;
 }
 
 .header-search {
@@ -41,8 +50,11 @@ header {
   width: 360px;
   height: 40px;
   margin: 10px;
-  padding: 5px 20px 5px 5px;
+  padding: 5px 40px 5px 5px;
   font-size: 16px;
+  border: 1px solid white;
+  border-radius: 20px;
+  -webkit-appearance: none;
 }
 
 .header-icon {
