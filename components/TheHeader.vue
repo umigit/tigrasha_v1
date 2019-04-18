@@ -42,6 +42,7 @@ header {
   right: 30px;
   transform: translate(50%, -50%);
   font-size: 20px;
+  color: darkgray;
 }
 
 .header-search {
