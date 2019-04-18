@@ -15,7 +15,16 @@ module.exports = {
   },
   modules: [
     '@nuxtjs/pwa',
+    'nuxt-fontawesome',
   ],
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      }
+    ]
+  },
   /*
   ** Customize the progress bar color
   */
