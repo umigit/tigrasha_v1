@@ -19,6 +19,9 @@ export default {
 <style>
 .container {
   min-height: 100vh;
+  /* background-image: url("~assets/images/gray-wall.jpg");
+  background-size: cover;
+  background-position: center center; */
 }
 </style>
 
