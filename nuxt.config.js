@@ -15,6 +15,7 @@ module.exports = {
   },
   modules: [
     '@nuxtjs/pwa',
+    'nuxt-fontawesome',
   ],
   /*
   ** Customize the progress bar color
