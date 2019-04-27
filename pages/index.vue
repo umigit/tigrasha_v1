@@ -27,7 +27,7 @@ export default {
     TheHeader,
   },
   async asyncData({}) {
-    let result = await axios.get('https://118.27.15.65/api/posts/?format=json');
+    let result = await axios.get('https://tigrasha-api.die-katze.net/posts/?format=json');
     const posts = result.data;
     return { posts };
   },
