@@ -1,92 +1,57 @@
 <template>
   <section class="container">
-    <div>
-      <TheHeader/>
-      <div class="poster-content">
-        <div class="poster-box">
-          <div class="poster" v-for="post in posts" :key="post.id">
-            <h2>{{post.title}}</h2>
-            <img class="post-image" :src="post.image"/>
-            <div class="post-text">
-              <p>お名前：{{post.name}}</p>
-              <p>最後に見た場所：{{post.place}}</p>
-            </div>
-          </div>
+    <div class="top-container">
+      <div class="description">
+        <h1 class="welcome">チグラーシャへようこそ！</h1>
+        <div class="QandA">
+          <h2>これはなんのサイト？</h2>
+          <p>　このサイトはGPSの位置情報を利用した「迷い猫捜索システム」です。</p>
+          <h2>このサイトで出来ること</h2>
+          <h3>1. 張り紙</h3>
+          <p>　張り紙をイメージした捜索依頼を投稿することが出来ます。</p>
+          <h3>2. 投稿情報の提供</h3>
+          <p>　あなたの目撃した猫ちゃんの情報を投稿することが出来ます。</p>
         </div>
+      </div>
+      <div class="start">
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import axios from 'axios'
-import TheHeader from '~/components/TheHeader.vue'
-
 export default {
-  components: {
-    TheHeader,
-  },
-  async asyncData({}) {
-    let result = await axios.get('https://tigrasha-api.die-katze.net/posts/?format=json');
-    const posts = result.data;
-    return { posts };
-  },
+
 }
 </script>
 
 <style>
-h2 {
+h1 {
+  font-size: 40px;
   text-align: center;
+}
+
+h2 {
   margin-bottom: 10px;
 }
-
-.container {
+.top-container {
   min-height: 100vh;
-  background-image: url("~assets/images/gray-wall.jpg");
-  background-size: cover;
+
+  /* background-image: url("~assets/images/icon-white.png"); */
   background-position: center center;
-}
-
-.poster-content {
-  padding-top: 60px;
-}
-
-.poster-box {
-  width: 1020px;
-  margin: 0 auto;
-  padding: 40px 0;
+  background-repeat: no-repeat;
+  background-size: 200px;
   display: flex;
-  justify-content: center;
+  align-items: center;
+}
+.description {
+  background-color: darkorange;
+  height: 100vh;
+  width: 50%;
+  padding: 40px;
 }
 
-.poster {
-  background-color: white;
-  width: 300px;
-  padding: 10px;
-}
-
-.post-image {
-  width: 280px;
-  height: 210px;
-  object-fit: contain;
-}
-
-@media screen and (max-width: 1024px) {
-  .poster-box {
-    width: 800px;
-  }
-}
-
-@media screen and (max-width: 896px) {
-  .poster-box {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .poster-box {
-    width: 100%;
-  }
+.QandA {
+  margin-top: 30px;
 }
 </style>
-
