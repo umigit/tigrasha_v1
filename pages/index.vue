@@ -2,6 +2,7 @@
   <section class="container">
     <div class="top-container">
       <div class="description">
+        <img class="top-icon" src="~/assets/images/icon-white.png"/>
         <h1 class="welcome">チグラーシャへようこそ！</h1>
         <div class="QandA">
           <h2>これはなんのサイト？</h2>
@@ -31,19 +32,26 @@ h1 {
   text-align: center;
 }
 
-h2 {
-  margin-bottom: 10px;
+h2, h3 {
+  margin-top: 10px;
 }
+
 .top-container {
   min-height: 100vh;
-
-  /* background-image: url("~assets/images/icon-white.png"); */
+  color: white;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 200px;
   display: flex;
   align-items: center;
 }
+
+.top-icon {
+  height: 100px;
+  width: 100%;
+  object-fit: contain;
+}
+
 .description {
   background-color: darkorange;
   height: 100vh;
