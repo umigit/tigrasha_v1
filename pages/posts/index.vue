@@ -5,7 +5,7 @@
       <div class="poster-content">
         <div class="poster-box">
           <div class="poster" v-for="post in posts" :key="post.id">
-            <h2>{{post.title}}</h2>
+            <h2 class="post-title">{{post.title}}</h2>
             <img class="post-image" :src="post.image"/>
             <div class="post-text">
               <p>お名前：{{post.name}}</p>
@@ -35,13 +35,18 @@ export default {
 </script>
 
 <style>
-h2 {
+html, body {
+  height: 100%;
+}
+
+.post-title {
   text-align: center;
   margin-bottom: 10px;
 }
 
 .container {
   min-height: 100vh;
+  height: 100%;
   background-image: url("~assets/images/gray-wall.jpg");
   background-size: cover;
   background-position: center center;
