@@ -15,6 +15,7 @@
         </div>
       </div>
       <div class="start">
+        <div class="start-mask"></div>
       </div>
     </div>
   </section>
@@ -61,5 +62,19 @@ h2, h3 {
 
 .QandA {
   margin-top: 30px;
+}
+
+.start {
+  background-image: url("~assets/images/tigrasha.jpg");
+  background-position: center center;
+  background-size: 100vh;
+  height: 100vh;
+  width: 50vw;
+}
+
+.start-mask {
+  background-color: rgba(0,0,0,0.5);
+  height: 100%;
+  width: 100%;
 }
 </style>
