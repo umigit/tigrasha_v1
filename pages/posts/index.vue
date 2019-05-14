@@ -4,7 +4,7 @@
       <TheHeader/>
       <div class="poster-content">
         <div class="poster-box">
-          <div class="poster" v-for="post in posts" :key="post.id">
+          <div class="poster" v-for="post in posts" :key="post.id" @click="$router.push('posts/' + post.id)">
             <h2 class="post-title">{{post.title}}</h2>
             <img class="post-image" :src="post.image"/>
             <div class="post-text">
@@ -27,7 +27,7 @@ export default {
     TheHeader,
   },
   async asyncData({}) {
-    let result = await axios.get('https://tigrasha-api.die-katze.net/posts/?format=json');
+    let result = await axios.get('https://tigrasha-api.die-katze.net/api/posts/?format=json');
     const posts = result.data;
     return { posts };
   },
