@@ -16,8 +16,12 @@ module.exports = {
   },
   modules: [
     '@nuxtjs/pwa',
+    '@nuxtjs/axios',
     'nuxt-fontawesome',
   ],
+  axios: {
+    // proxyHeaders: false
+  },
   fontawesome: {
     imports: [
       {
