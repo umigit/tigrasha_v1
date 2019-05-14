@@ -51,10 +51,11 @@ header {
   width: 360px;
   height: 40px;
   margin: 10px;
-  padding: 5px 40px 5px 5px;
+  padding: 10px 40px 10px 20px;
   font-size: 16px;
   border: 1px solid white;
   border-radius: 20px;
+  outline: none;
   -webkit-appearance: none;
 }
 
